@@ -1,0 +1,12 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/code_interview_dev.sqlite3
+
+test:
+  <<: *default
+  database: db/code_interview_test.sqlite3
